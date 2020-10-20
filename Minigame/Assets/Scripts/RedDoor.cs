@@ -18,7 +18,7 @@ public class RedDoor : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D"){
+        if(other.gameObject.CompareTag("ReversePlayer") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D"){
             if(playerHealth!=null){
                 playerHealth.DamagePlayer(20);        
             }

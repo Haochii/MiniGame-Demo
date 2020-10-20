@@ -41,4 +41,9 @@ public class CameraFollow : MonoBehaviour
         maxPosition = maxPos;
     }
 
+    public void Reverse()
+    {
+        transform.Rotate(0, 0, 180.0f);
+    }
+
 }   

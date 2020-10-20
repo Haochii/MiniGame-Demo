@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReversePlayer : MonoBehaviour
 {
+    public int index;
     private ArrayList m_List = new ArrayList();
     public Transform leftDownPos;
     public Transform rightUpPos;
@@ -20,9 +21,11 @@ public class ReversePlayer : MonoBehaviour
     void Start()
     {
         myAnim = GetComponent<Animator>();
-
+        
         m_List = PlayerController.m_List;
         length = PlayerController.m_ListLength - 1;
+        length -= index * 100;
+        
         runAnim_List = PlayerController.runAnim_List;
         jumpAnim_List = PlayerController.jumpAnim_List;
         fallAnim_List = PlayerController.fallAnim_List;

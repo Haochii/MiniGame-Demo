@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public static int Anim_ListLength = 0;
 
     public float speed = 5.0f;
-    public float jumpspeed = 10.0f;
+    public float jumpspeed = 15.0f;
     public float doublejumpspeed = 8.0f;
 
     public bool isGround = true;

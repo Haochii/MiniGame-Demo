@@ -16,10 +16,15 @@ public class DoorToNextScene : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
+    void  OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player") 
             && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D"){
-               PlayerController.IsReverse = true;
+            Camera mainCamera;
+            GameObject gameObject = GameObject.Find("Main Camera");
+            mainCamera = gameObject.GetComponent<Camera>();
+            //mainCamera.transform.Rotate(0, 0, 180.0f);
+
+            PlayerController.IsReverse = true;
                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); 
         }
     }
