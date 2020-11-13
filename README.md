@@ -1,4 +1,6 @@
 # MiniGame-Demo 
+## This Repo has been transfered to SVN.
+
 在@fantast416的工程上略作修改，以跑跳&基础元素设计的一关小游戏
 在原有最简要的机制上额外添加了一下人为规则：
  * 回溯前与回溯后都要收集要素（蝙蝠）
